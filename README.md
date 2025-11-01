@@ -49,6 +49,7 @@ Tecnologia	Descrição
 ---
 
 ## ⚙️ Estrutura da Aplicação
+```
 src/
  ├── main/
  │   ├── java/
@@ -63,7 +64,7 @@ src/
  │       └── data.sql / schema.sql   # Scripts de inicialização (opcional)
  └── test/
      └── ...                        # Testes automatizados
-
+```
 ## 🔌 Endpoints Principais
 Método	Endpoint	Descrição
 - POST	/api/alimentos	Cadastra um novo alimento
@@ -71,46 +72,49 @@ Método	Endpoint	Descrição
 - POST	/api/consumo	Registra o consumo diário de alimentos
 - GET	/api/consumo/{data}	Lista os alimentos consumidos em uma data específica
 - POST	/api/pesagens	Registra uma nova pesagem (com cálculo automático do IMC)
--GET	/api/pesagens/historico	Retorna o histórico completo de pesagens do usuário
+- GET	/api/pesagens/historico	Retorna o histórico completo de pesagens do usuário
 
 ---
 
 ##🧪 Como Executar o Projeto
 ✅ Pré-requisitos
 
-Java 17 ou superior
+- Java 17 ou superior
 
-Maven ou Gradle
+- Maven ou Gradle
 
-Oracle Database configurado e em execução
+- Oracle Database configurado e em execução
 
-▶️ Passos
+## ▶️ Passos
 
 Clonar o repositório:
 
+```
 git clone https://github.com/seu-usuario/calorias-api.git
 cd calorias-api
-
+```
 
 Configurar o banco de dados Oracle
 No arquivo application.properties:
-
+```
 spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
 spring.datasource.username=SEU_USUARIO
 spring.datasource.password=SUA_SENHA
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-
+```
 
 Executar o projeto:
 
+```
 ./mvnw spring-boot:run
-
+```
 
 ou
 
+```
 ./gradlew bootRun
-
+```
 
 Acessar a API:
 
@@ -118,18 +122,18 @@ Base URL: http://localhost:8080
 
 (Opcional) Swagger UI: http://localhost:8080/swagger-ui.html
 
-📈 Próximas Melhorias
+## 📈 Próximas Melhorias
 
-Autenticação JWT para controle de usuários
+1. Autenticação JWT para controle de usuários
 
-Dashboard de estatísticas (macro nutrientes e IMC)
+2. Dashboard de estatísticas (macro nutrientes e IMC)
 
-Integração com frontend web ou mobile
+3. Integração com frontend web ou mobile
 
-Exportação de relatórios em PDF
+4. Exportação de relatórios em PDF
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 
-Desenvolvido por: [Seu Nome]
+Desenvolvido por: Vinicius Soares Oliveira
 🎓 Projeto acadêmico FIAP — Back-end com Spring Boot e Oracle Database
-📧 Contato: seu.email@exemplo.com
+📧 Contato: vhisoares39@gmail.com
